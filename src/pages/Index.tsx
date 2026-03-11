@@ -161,7 +161,7 @@ const Index = () => {
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-serif text-3xl md:text-4xl mb-4">Pripravljeni na začetek?</h2>
           <p className="text-primary-foreground/80 mb-8 text-lg">
-            Vprašalnik traja približno 5 minut. Na koncu prejmete povzetek vaših pravic in priporočene naslednje korake.
+            Vprašalnik traja približno 5 minut. Na podlagi vaših odgovorov pripravimo obrazec, ki ga pošljete Informacijskemu pooblaščencu RS za uveljavljanje vaših pravic.
           </p>
           <Button
             onClick={() => navigate("/vprasalnik")}
