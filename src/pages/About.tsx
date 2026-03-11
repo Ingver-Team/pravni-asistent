@@ -22,7 +22,7 @@ const About = () => {
 
         <div className="space-y-6 text-muted-foreground leading-relaxed">
           <p>
-            GDPR Pomočnik je brezplačno orodje, ki posameznikom pomaga pri uveljavljanju njihovih pravic
+            Prijava IP je brezplačno orodje, ki posameznikom pomaga pri uveljavljanju njihovih pravic
             po Splošni uredbi o varstvu podatkov (GDPR). Naš cilj je poenostaviti postopek priprave
             obrazca za Informacijskega pooblaščenca Republike Slovenije.
           </p>
