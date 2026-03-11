@@ -82,13 +82,13 @@ const Index = () => {
         <div className="max-w-4xl mx-auto px-6 py-24 md:py-32 text-center relative">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary text-sm font-medium px-4 py-1.5 rounded-full mb-6">
             <BookOpen className="w-4 h-4" />
-            Brezplačen vprašalnik
+            Obrazec za Informacijskega pooblaščenca
           </div>
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6 leading-tight">
-            Uveljavljajte svoje pravice po <span className="text-primary">GDPR uredbi</span>
+            Pripravite obrazec za <span className="text-primary">Informacijskega pooblaščenca</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            Interaktivni vodič, ki vam pomaga razumeti in uveljaviti vaše pravice glede varstva osebnih podatkov. Enostavno, hitro in brezplačno.
+            Vprašalnik vas vodi skozi pripravo obrazca za uveljavljanje pravic po GDPR, ki se pošlje Informacijskemu pooblaščencu Republike Slovenije. Enostavno, hitro in brezplačno.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button onClick={() => navigate("/vprasalnik")} size="lg" className="gap-2 text-base px-8">
