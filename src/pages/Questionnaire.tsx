@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const DOCUWISE_URL = "https://app.docuwise.eu/sl/share/f4396b5a-c3d2-42b5-a491-98381bf7643c";
 
 const Questionnaire = () => {
-  const [chatOpen, setChatOpen] = useState(true);
+  const [chatOpen, setChatOpen] = useState(false);
 
   return (
     <div className="flex h-screen overflow-hidden">
