@@ -10,23 +10,64 @@ interface Message {
 
 interface ChatPanelProps {
   onClose: () => void;
+  rightType?: string;
 }
 
-const INITIAL_MESSAGE: Message = {
-  role: "assistant",
-  content:
-    "Pozdravljeni! 👋 Sem vaš AI pomočnik za izpolnjevanje pogodbe o zaposlitvi.\n\nLahko vam pomagam pri:\n- **Razumevanju posameznih polj** v vprašalniku\n- **Razlagi pravnih pojmov** v preprostem jeziku\n- **Nasveti glede GDPR** skladnosti\n\nKar vprašajte, če se kje zataknete!",
+const INITIAL_MESSAGES: Record<string, Message> = {
+  access: {
+    role: "assistant",
+    content:
+      "Pozdravljeni! 👋 Pomagam vam pri izpolnjevanju zahteve za **seznanitev z osebnimi podatki** (člen 15 GDPR).\n\nLahko vam pomagam pri:\n- **Razumevanju posameznih polj** v obrazcu\n- **Razlagi pravnih pojmov** v preprostem jeziku\n- **Nasveti glede vaših pravic** pri varstvu podatkov\n\nKar vprašajte, če se kje zataknete!",
+  },
+  erasure: {
+    role: "assistant",
+    content:
+      "Pozdravljeni! 👋 Pomagam vam pri izpolnjevanju zahteve za **izbris osebnih podatkov** (člen 17 GDPR).\n\nLahko vam pomagam pri:\n- **Razumevanju posameznih polj** v obrazcu\n- **Razlagi pravnih pojmov** v preprostem jeziku\n- **Nasveti glede pravice do pozabe**\n\nKar vprašajte, če se kje zataknete!",
+  },
+  rectification: {
+    role: "assistant",
+    content:
+      "Pozdravljeni! 👋 Pomagam vam pri izpolnjevanju zahteve za **popravek osebnih podatkov** (člen 16 GDPR).\n\nLahko vam pomagam pri:\n- **Razumevanju posameznih polj** v obrazcu\n- **Razlagi pravnih pojmov** v preprostem jeziku\n- **Nasveti glede popravka netočnih podatkov**\n\nKar vprašajte, če se kje zataknete!",
+  },
+  default: {
+    role: "assistant",
+    content:
+      "Pozdravljeni! 👋 Sem vaš AI pomočnik za pripravo obrazcev za Informacijskega pooblaščenca.\n\nLahko vam pomagam pri:\n- **Razumevanju posameznih polj** v obrazcu\n- **Razlagi pravnih pojmov** v preprostem jeziku\n- **Nasveti glede vaših pravic** po GDPR\n\nKar vprašajte, če se kje zataknete!",
+  },
 };
 
-const SUGGESTED_QUESTIONS = [
-  "Kaj je EMŠO in kje ga najdem?",
-  "Kakšen je minimalni letni dopust?",
-  "Kaj pomeni konkurenčna klavzula?",
-  "Koliko traja poskusno delo?",
-];
+const SUGGESTED_QUESTIONS: Record<string, string[]> = {
+  access: [
+    "Kaj napisati v polje 'Komu vlagate zahtevo'?",
+    "Katere podatke lahko zahtevam od upravljavca?",
+    "Kaj napisati v utemeljitev?",
+    "Kakšni so roki za odgovor upravljavca?",
+  ],
+  erasure: [
+    "Kaj napisati v polje 'Komu vlagate zahtevo'?",
+    "Kdaj lahko zahtevam izbris podatkov?",
+    "Ali obstajajo izjeme, ko izbris ni mogoč?",
+    "Kaj priložiti kot dokazilo?",
+  ],
+  rectification: [
+    "Kaj napisati v polje 'Komu vlagate zahtevo'?",
+    "Kako opisati, kateri podatki so napačni?",
+    "Kaj napisati kot razlog za popravek?",
+    "Kakšni so roki za odgovor upravljavca?",
+  ],
+  default: [
+    "Kaj je Informacijski pooblaščenec?",
+    "Katere pravice imam po GDPR?",
+    "Kakšni so roki za odgovor upravljavca?",
+    "Kaj storiti, če upravljavec ne odgovori?",
+  ],
+};
 
-export function ChatPanel({ onClose }: ChatPanelProps) {
-  const [messages, setMessages] = useState<Message[]>([INITIAL_MESSAGE]);
+export function ChatPanel({ onClose, rightType }: ChatPanelProps) {
+  const initialMsg = INITIAL_MESSAGES[rightType || ""] || INITIAL_MESSAGES.default;
+  const suggestions = SUGGESTED_QUESTIONS[rightType || ""] || SUGGESTED_QUESTIONS.default;
+
+  const [messages, setMessages] = useState<Message[]>([initialMsg]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(true);
@@ -60,6 +101,7 @@ export function ChatPanel({ onClose }: ChatPanelProps) {
         },
         body: JSON.stringify({
           messages: newMessages.map((m) => ({ role: m.role, content: m.content })),
+          rightType: rightType || undefined,
         }),
       });
 
@@ -184,7 +226,7 @@ export function ChatPanel({ onClose }: ChatPanelProps) {
               <HelpCircle className="w-3 h-3" />
               Pogosta vprašanja:
             </div>
-            {SUGGESTED_QUESTIONS.map((q, i) => (
+            {suggestions.map((q, i) => (
               <button
                 key={i}
                 onClick={() => sendMessage(q)}
