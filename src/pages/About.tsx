@@ -75,10 +75,7 @@ const About = () => {
 
           <h2 className="font-serif text-2xl text-foreground pt-4">Kontakt</h2>
           <p>
-            Za vprašanja ali predloge nas lahko kontaktirate na e-poštni naslov:{" "}
-            <a href="mailto:info@gdpr-pomocnik.si" className="text-primary underline underline-offset-4 hover:text-primary/80">
-              info@gdpr-pomocnik.si
-            </a>
+            Za vprašanja ali predloge se obrnite na organizatorje tekmovanja AI x Pravo.
           </p>
         </div>
       </main>
