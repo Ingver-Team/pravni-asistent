@@ -1,6 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { Shield, FileCheck, UserCheck, Scale, ArrowRight, CheckCircle2, BookOpen, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const features = [
   {
