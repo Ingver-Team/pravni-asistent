@@ -25,7 +25,7 @@ const Questionnaire = () => {
             </Button>
             <div className="h-6 w-px bg-border" />
             <Link to="/" className="flex items-center gap-2">
-              <img src={ingverLogo} alt="Prijava IP" className="w-5 h-5" />
+              <img src={ingverLogo} alt="Prijava IP" className="h-6 w-auto" />
               <div>
                 <h1 className="font-serif text-lg leading-none">Prijava IP</h1>
                 <p className="text-xs text-muted-foreground">Obrazec za Informacijskega pooblaščenca</p>
