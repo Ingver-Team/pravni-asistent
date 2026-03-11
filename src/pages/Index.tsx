@@ -106,9 +106,9 @@ const Index = () => {
       <section id="features" className="py-20 md:py-28 bg-card border-y border-border">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">Kako vam pomagamo?</h2>
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">Kako deluje?</h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Naš sistem vas vodi skozi celoten postopek uveljavljanja vaših pravic po GDPR.
+              V treh korakih do obrazca, ki ga pošljete Informacijskemu pooblaščencu RS.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
