@@ -89,7 +89,7 @@ const Index = () => {
             Uveljavljajte svoje pravice pri <span className="text-primary">Informacijskem pooblaščencu</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            Če upravljavec vaših osebnih podatkov ni odgovoril na vašo zahtevo ali jo je zavrnil, lahko vložite prijavo pri Informacijskem pooblaščencu RS. Naš vprašalnik vam pomaga pripraviti ustrezen obrazec — hitro, enostavno in brezplačno.
+            Če upravljavec ni odgovoril na vašo zahtevo ali jo je zavrnil, lahko vložite prijavo pri Informacijskem pooblaščencu RS. Naš vprašalnik vam pomaga obrazec pripraviti hitro in enostavno.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button onClick={() => navigate("/vprasalnik")} size="lg" className="gap-2 text-base px-8">
