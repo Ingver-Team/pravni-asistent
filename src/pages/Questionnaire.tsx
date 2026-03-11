@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MessageSquare, ArrowLeft } from "lucide-react";
+import { MessageSquare, ArrowLeft, FileX } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ChatPanel } from "@/components/gdpr/ChatPanel";
 import { Link } from "react-router-dom";
