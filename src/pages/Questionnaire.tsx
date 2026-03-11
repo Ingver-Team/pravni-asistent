@@ -6,7 +6,12 @@ import { Link } from "react-router-dom";
 import ingverLogo from "@/assets/ingver_square.png";
 import { PreQuestionnaire } from "@/components/gdpr/PreQuestionnaire";
 
-const DOCUWISE_URL = "https://app.docuwise.eu/sl/share/f4396b5a-c3d2-42b5-a491-98381bf7643c";
+const DOCUWISE_URLS: Record<string, string> = {
+  access: "https://app.docuwise.eu/sl/share/f4396b5a-c3d2-42b5-a491-98381bf7643c",
+  erasure: "https://app.docuwise.eu/sl/share/963ff6c5-6eb8-4284-8742-8ff74feb14bb",
+  rectification: "https://app.docuwise.eu/sl/share/f4396b5a-c3d2-42b5-a491-98381bf7643c",
+  portability: "https://app.docuwise.eu/sl/share/f4396b5a-c3d2-42b5-a491-98381bf7643c",
+};
 
 const Questionnaire = () => {
   const [chatOpen, setChatOpen] = useState(false);
@@ -63,7 +68,7 @@ const Questionnaire = () => {
           ) : (
             <div className="flex-1 min-w-0">
               <iframe
-                src={DOCUWISE_URL}
+                src={DOCUWISE_URLS[preAnswers.right_type] || DOCUWISE_URLS.access}
                 className="w-full h-full border-0"
                 title="DocuWise vprašalnik"
                 allow="clipboard-write"
