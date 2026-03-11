@@ -132,10 +132,10 @@ const Index = () => {
             <div>
               <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">Vaše pravice po GDPR</h2>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Z vprašalnikom pripravite obrazec, ki ga nato pošljete Informacijskemu pooblaščencu RS. Pokrivamo vse ključne pravice po GDPR uredbi.
+                Splošna uredba o varstvu podatkov (GDPR) vam zagotavlja vrsto pravic glede vaših osebnih podatkov. Če upravljavec teh pravic ne spoštuje, lahko pri Informacijskem pooblaščencu vložite prijavo. Izberite pravico, ki jo želite uveljavljati, in pripravili vam bomo ustrezen obrazec.
               </p>
               <Button onClick={() => navigate("/vprasalnik")} className="gap-2">
-                Preveri svoje pravice <ArrowRight className="w-4 h-4" />
+                Pripravi obrazec <ArrowRight className="w-4 h-4" />
               </Button>
             </div>
             <Accordion type="single" collapsible className="space-y-2">
