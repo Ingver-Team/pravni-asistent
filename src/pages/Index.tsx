@@ -72,7 +72,7 @@ const Index = () => {
             <span className="font-serif text-xl">Prijava IP</span>
           </div>
           <Button onClick={() => navigate("/vprasalnik")} size="sm" className="gap-2">
-            Začni vprašalnik <ArrowRight className="w-4 h-4" />
+            Pripravi obrazec <ArrowRight className="w-4 h-4" />
           </Button>
         </div>
       </header>
