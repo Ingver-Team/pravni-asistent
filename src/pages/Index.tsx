@@ -181,6 +181,10 @@ const Index = () => {
             <Shield className="w-4 h-4" />
             <span>GDPR Pomočnik</span>
           </div>
+          <div className="flex items-center gap-6">
+            <Link to="/o-nas" className="hover:text-foreground transition-colors">O nas</Link>
+            <Link to="/zasebnost" className="hover:text-foreground transition-colors">Zasebnost & piškotki</Link>
+          </div>
           <p>© {new Date().getFullYear()} Vse pravice pridržane.</p>
         </div>
       </footer>
