@@ -13,49 +13,49 @@ const features = [
   {
     icon: FileCheck,
     title: "Vodeni vprašalnik",
-    description: "Korak za korakom skozi postopek uveljavljanja vaših pravic po GDPR uredbi.",
+    description: "Odgovorite na nekaj vprašanj, na podlagi katerih se samodejno pripravi obrazec za prijavo kršitve pri IP.",
   },
   {
     icon: UserCheck,
-    title: "Preverjanje identitete",
-    description: "Jasna navodila za postopek identifikacije in uveljavljanja zahtevkov.",
+    title: "Prilagojeno glede na pravico",
+    description: "Obrazec se prilagodi glede na to, ali uveljavljate vpogled, izbris, popravek ali prenos podatkov.",
   },
   {
     icon: Scale,
-    title: "Pravna podlaga",
-    description: "Vsa vprašanja temeljijo na aktualni zakonodaji in GDPR uredbi EU.",
+    title: "Skladno z GDPR in ZVOP-2",
+    description: "Vprašanja temeljijo na Splošni uredbi o varstvu podatkov (GDPR) in slovenskem ZVOP-2.",
   },
   {
     icon: MessageSquare,
     title: "AI Pomočnik",
-    description: "Integriran virtualni asistent za pomoč pri razumevanju vaših pravic.",
+    description: "Če se kje zatakne, vam je na voljo virtualni asistent, ki pojasni pravne pojme in postopke.",
   },
 ];
 
 const rights = [
   {
     title: "Pravica do dostopa do podatkov",
-    description: "Imate pravico vedeti, ali se vaši osebni podatki obdelujejo, in dostopati do teh podatkov. Upravljavec vam mora zagotoviti kopijo vaših osebnih podatkov.",
+    description: "Upravljavec vam mora v enem mesecu zagotoviti informacijo o tem, ali obdeluje vaše osebne podatke, in vam posredovati njihovo kopijo. Zahtevo lahko oddate pisno ali elektronsko.",
   },
   {
     title: "Pravica do izbrisa (pravica do pozabe)",
-    description: "Zahtevate lahko izbris vaših osebnih podatkov, kadar ti niso več potrebni za namen, za katerega so bili zbrani, ali če prekličete privolitev.",
+    description: "Upravljavec mora brez nepotrebnega odlašanja izbrisati vaše podatke, kadar ti niso več potrebni, prekličete privolitev ali je obdelava nezakonita. Če zahtevo zavrne, se lahko pritožite pri IP.",
   },
   {
     title: "Pravica do popravka podatkov",
-    description: "Če so vaši osebni podatki netočni ali nepopolni, imate pravico zahtevati njihov popravek ali dopolnitev brez nepotrebnega odlašanja.",
+    description: "Če upravljavec vodi netočne ali nepopolne podatke o vas, mu lahko naložite, da jih popravi ali dopolni. Upravljavec mora odgovoriti v enem mesecu.",
   },
   {
     title: "Pravica do prenosljivosti podatkov",
-    description: "Svoje osebne podatke lahko prejmete v strukturirani obliki in jih prenesete k drugemu upravljavcu, kadar obdelava temelji na privolitvi ali pogodbi.",
+    description: "Kadar obdelava temelji na privolitvi ali pogodbi, lahko zahtevate, da vam upravljavec posreduje vaše podatke v strukturirani, strojno berljivi obliki ali jih prenese neposredno drugemu upravljavcu.",
   },
   {
     title: "Pravica do ugovora obdelavi",
-    description: "Kadar koli lahko ugovarjate obdelavi svojih osebnih podatkov, zlasti za namene neposrednega trženja ali obdelave na podlagi zakonitega interesa.",
+    description: "Obdelavi lahko ugovarjate kadar koli, zlasti pri neposrednem trženju. Upravljavec mora prenehati z obdelavo, razen če dokaže nujne zakonite razloge.",
   },
   {
     title: "Pravica do omejitve obdelave",
-    description: "Zahtevate lahko omejitev obdelave vaših podatkov, na primer ko izpodbijate njihovo točnost ali ko je obdelava nezakonita, vi pa nasprotujete izbrisu.",
+    description: "Zahtevate lahko, da upravljavec začasno preneha z obdelavo vaših podatkov – na primer, dokler se ne razreši spor o točnosti podatkov ali zakonitosti obdelave.",
   },
 ];
 
