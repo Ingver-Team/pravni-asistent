@@ -24,12 +24,19 @@ const Questionnaire = () => {
         {/* Top Bar */}
         <header className="h-14 border-b border-border bg-card flex items-center justify-between px-6 shrink-0">
           <div className="flex items-center gap-3">
-            <Button variant="ghost" size="sm" asChild className="gap-2 -ml-2">
-              <Link to="/">
+            {preCompleted ? (
+              <Button variant="ghost" size="sm" onClick={() => setPreCompleted(false)} className="gap-2 -ml-2">
                 <ArrowLeft className="w-4 h-4" />
                 Nazaj
-              </Link>
-            </Button>
+              </Button>
+            ) : (
+              <Button variant="ghost" size="sm" asChild className="gap-2 -ml-2">
+                <Link to="/">
+                  <ArrowLeft className="w-4 h-4" />
+                  Nazaj
+                </Link>
+              </Button>
+            )}
             <div className="h-6 w-px bg-border" />
             <Link to="/" className="flex items-center gap-2">
               <img src={ingverLogo} alt="Prijava IP" className="h-6 w-auto" />
