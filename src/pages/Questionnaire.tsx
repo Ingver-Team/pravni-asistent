@@ -76,7 +76,7 @@ const Questionnaire = () => {
             </div>
           )}
 
-          {chatOpen && <ChatPanel onClose={() => setChatOpen(false)} />}
+          {chatOpen && <ChatPanel onClose={() => setChatOpen(false)} rightType={preAnswers.right_type} />}
         </div>
       </div>
     </div>
