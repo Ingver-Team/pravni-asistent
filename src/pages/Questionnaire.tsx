@@ -30,12 +30,12 @@ const Questionnaire = () => {
         <header className="h-14 border-b border-border bg-card flex items-center justify-between px-6 shrink-0">
           <div className="flex items-center gap-3">
             {preCompleted ? (
-              <Button variant="ghost" size="sm" onClick={() => setPreCompleted(false)} className="gap-2 -ml-2">
+              <Button variant="ghost" size="sm" onClick={() => setPreCompleted(false)} className="gap-2 -ml-2 hover:bg-primary/10 hover:text-primary">
                 <ArrowLeft className="w-4 h-4" />
                 Nazaj
               </Button>
             ) : (
-              <Button variant="ghost" size="sm" asChild className="gap-2 -ml-2">
+              <Button variant="ghost" size="sm" asChild className="gap-2 -ml-2 hover:bg-primary/10 hover:text-primary">
                 <Link to="/">
                   <ArrowLeft className="w-4 h-4" />
                   Nazaj
