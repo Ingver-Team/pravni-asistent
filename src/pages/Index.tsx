@@ -179,7 +179,7 @@ const Index = () => {
       <footer className="border-t border-border py-8">
         <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
-            <img src={ingverLogo} alt="Prijava IP" className="w-5 h-5" />
+            <img src={ingverLogo} alt="Prijava IP" className="h-5 w-auto" />
             <span>Prijava IP</span>
           </div>
           <div className="flex items-center gap-6">
