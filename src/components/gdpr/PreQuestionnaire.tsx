@@ -11,33 +11,14 @@ interface Question {
 
 const questions: Question[] = [
   {
-    id: "complaint_type",
-    title: "Kaj želite prijaviti?",
-    description: "Izberite vrsto prijave, ki najbolj ustreza vaši situaciji.",
+    id: "right_type",
+    title: "Kaj želite urediti glede svojih osebnih podatkov?",
+    description: "Izberite pravico, ki jo želite uveljavljati pri upravljavcu vaših osebnih podatkov.",
     options: [
-      { value: "access", label: "Kršitev pravice do dostopa", description: "Upravljavec mi ni omogočil vpogleda v moje osebne podatke." },
-      { value: "erasure", label: "Kršitev pravice do izbrisa", description: "Upravljavec ni izbrisal mojih osebnih podatkov kljub zahtevi." },
-      { value: "rectification", label: "Kršitev pravice do popravka", description: "Moji osebni podatki so netočni ali nepopolni." },
-      { value: "other", label: "Drugo", description: "Druga kršitev pravic po GDPR uredbi." },
-    ],
-  },
-  {
-    id: "prior_request",
-    title: "Ali ste upravljavcu že poslali zahtevo?",
-    description: "Pred prijavo Informacijskemu pooblaščencu morate najprej kontaktirati upravljavca podatkov.",
-    options: [
-      { value: "yes", label: "Da, zahtevo sem že poslal/a", description: "Upravljavcu sem poslal/a pisno zahtevo." },
-      { value: "no", label: "Ne, zahteve še nisem poslal/a", description: "Upravljavca še nisem kontaktiral/a." },
-    ],
-  },
-  {
-    id: "response_received",
-    title: "Ali ste prejeli odgovor upravljavca?",
-    description: "Upravljavec mora odgovoriti v roku enega meseca od prejema zahteve.",
-    options: [
-      { value: "yes_unsatisfied", label: "Da, vendar sem nezadovoljen/a", description: "Odgovor sem prejel/a, ampak ni zadovoljiv." },
-      { value: "no_response", label: "Ne, nisem prejel/a odgovora", description: "Od oddaje zahteve je minilo več kot 30 dni." },
-      { value: "partial", label: "Prejel/a sem delni odgovor", description: "Upravljavec je odgovoril le na del moje zahteve." },
+      { value: "access", label: "Želim vpogled v svoje podatke", description: "Pravica do dostopa do osebnih podatkov (15. člen GDPR)." },
+      { value: "erasure", label: "Želim izbris svojih podatkov", description: "Pravica do izbrisa – »pravica do pozabe« (17. člen GDPR)." },
+      { value: "rectification", label: "Želim popraviti ali dopolniti svoje podatke", description: "Pravica do popravka netočnih ali nepopolnih podatkov (16. člen GDPR)." },
+      { value: "portability", label: "Želim prenesti svoje podatke", description: "Pravica do prenosljivosti podatkov (20. člen GDPR)." },
     ],
   },
 ];
