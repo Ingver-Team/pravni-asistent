@@ -1,6 +1,6 @@
 import { useNavigate, Link } from "react-router-dom";
 import { Shield, FileCheck, UserCheck, Scale, ArrowRight, CheckCircle2, BookOpen, MessageSquare } from "lucide-react";
-import ingverLogo from "@/assets/ingver_logo-2.png";
+import ingverLogo from "@/assets/ingver_square.png";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,

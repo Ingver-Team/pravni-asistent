@@ -3,6 +3,7 @@ import { MessageSquare, Shield, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ChatPanel } from "@/components/gdpr/ChatPanel";
 import { Link } from "react-router-dom";
+import ingverLogo from "@/assets/ingver_square.png";
 
 const DOCUWISE_URL = "https://app.docuwise.eu/sl/share/f4396b5a-c3d2-42b5-a491-98381bf7643c";
 
@@ -24,7 +25,7 @@ const Questionnaire = () => {
             </Button>
             <div className="h-6 w-px bg-border" />
             <Link to="/" className="flex items-center gap-2">
-              <img src="/src/assets/logo.png" alt="Prijava IP" className="w-5 h-5" />
+              <img src={ingverLogo} alt="Prijava IP" className="w-5 h-5" />
               <div>
                 <h1 className="font-serif text-lg leading-none">Prijava IP</h1>
                 <p className="text-xs text-muted-foreground">Obrazec za Informacijskega pooblaščenca</p>
