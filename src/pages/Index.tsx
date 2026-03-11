@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Shield, FileCheck, UserCheck, Scale, ArrowRight, CheckCircle2, BookOpen, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -180,6 +180,10 @@ const Index = () => {
           <div className="flex items-center gap-2">
             <Shield className="w-4 h-4" />
             <span>GDPR Pomočnik</span>
+          </div>
+          <div className="flex items-center gap-6">
+            <Link to="/o-nas" className="hover:text-foreground transition-colors">O nas</Link>
+            <Link to="/zasebnost" className="hover:text-foreground transition-colors">Zasebnost & piškotki</Link>
           </div>
           <p>© {new Date().getFullYear()} Vse pravice pridržane.</p>
         </div>
