@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MessageSquare, ArrowLeft } from "lucide-react";
+import { MessageSquare, ArrowLeft, FileX } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ChatPanel } from "@/components/gdpr/ChatPanel";
 import { Link } from "react-router-dom";
@@ -65,14 +65,32 @@ const Questionnaire = () => {
         <div className="flex-1 flex overflow-hidden">
           {!preCompleted ? (
             <PreQuestionnaire onComplete={handlePreComplete} />
-          ) : (
+          ) : DOCUWISE_URLS[preAnswers.right_type] ? (
             <div className="flex-1 min-w-0">
               <iframe
-                src={DOCUWISE_URLS[preAnswers.right_type] || DOCUWISE_URLS.access}
+                src={DOCUWISE_URLS[preAnswers.right_type]}
                 className="w-full h-full border-0"
                 title="DocuWise vprašalnik"
                 allow="clipboard-write"
               />
+            </div>
+          ) : (
+            <div className="flex-1 flex items-center justify-center p-6 bg-background">
+              <div className="text-center max-w-md">
+                <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mx-auto mb-6">
+                  <FileX className="w-8 h-8 text-muted-foreground" />
+                </div>
+                <h2 className="font-serif text-2xl text-foreground mb-3">
+                  Obrazec trenutno ni na voljo
+                </h2>
+                <p className="text-muted-foreground mb-8">
+                  Obrazec za to pravico je v pripravi in bo na voljo kmalu. Prosimo, poskusite znova kasneje ali izberite drugo pravico.
+                </p>
+                <Button variant="outline" onClick={() => setPreCompleted(false)} className="gap-2">
+                  <ArrowLeft className="w-4 h-4" />
+                  Nazaj na izbiro pravice
+                </Button>
+              </div>
             </div>
           )}
 
