@@ -9,7 +9,7 @@ import { PreQuestionnaire } from "@/components/gdpr/PreQuestionnaire";
 const DOCUWISE_URLS: Record<string, string> = {
   access: "https://app.docuwise.eu/sl/share/a6eeeeb0-06f4-4c52-ad88-3fe6ee5a952b",
   erasure: "https://app.docuwise.eu/sl/share/963ff6c5-6eb8-4284-8742-8ff74feb14bb",
-  rectification: "https://app.docuwise.eu/sl/share/fc323106-cfb2-46e4-9bb2-6a182776e589",
+  rectification: "https://app.docuwise.eu/en/share/9b0bde4a-727e-43e6-bd87-4049579f54dc",
   portability: "",
 };
 
