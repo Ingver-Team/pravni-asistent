@@ -49,19 +49,26 @@ import pika from "@/assets/team-pika.jpg";
           </div>
 
           <div className="border border-border rounded-lg p-6 bg-card">
-            <div className="flex items-center gap-3 mb-4">
-              <Users className="w-5 h-5 text-primary" />
-              <h3 className="font-serif text-xl text-foreground">Ekipa Ingver</h3>
+            <h2 className="font-serif text-2xl text-foreground mb-6">Ekipa Ingver</h2>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="flex flex-col items-center gap-2">
+                <img src={amalija} alt="Amalija" className="w-full aspect-square object-cover rounded-lg" />
+                <span className="text-sm font-medium text-foreground">Amalija</span>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <img src={sven} alt="Sven" className="w-full aspect-square object-cover rounded-lg" />
+                <span className="text-sm font-medium text-foreground">Sven</span>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <img src={lara} alt="Lara" className="w-full aspect-square object-cover rounded-lg" />
+                <span className="text-sm font-medium text-foreground">Lara</span>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <img src={pika} alt="Pika" className="w-full aspect-square object-cover rounded-lg" />
+                <span className="text-sm font-medium text-foreground">Pika</span>
+              </div>
             </div>
-
-            {/* Team photo placeholder */}
-            <div className="w-full aspect-video bg-muted rounded-lg border border-border flex items-center justify-center mb-4">
-              <span className="text-muted-foreground text-sm">Slika ekipe (kmalu)</span>
-            </div>
-
-            <p className="text-sm">
-              Smo ekipa navdušencev, ki verjamemo v moč tehnologije za dostopnejše pravne storitve.
-            </p>
           </div>
 
           <h2 className="font-serif text-2xl text-foreground pt-4">Kontakt</h2>
