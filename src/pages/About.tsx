@@ -1,4 +1,4 @@
-import { Shield, ArrowLeft } from "lucide-react";
+import { Shield, ArrowLeft, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -35,6 +35,32 @@ const About = () => {
             Naše orodje ne nadomešča pravnega svetovanja. Za kompleksnejše primere vam priporočamo,
             da se obrnete na odvetnika ali neposredno na Informacijskega pooblaščenca RS.
           </p>
+
+          {/* Hackathon & Team */}
+          <div className="border-t border-border pt-8 mt-8">
+            <h2 className="font-serif text-2xl text-foreground mb-4">Hackathon AI x Pravo</h2>
+            <p>
+              Ta projekt je nastal v sklopu hekatona <strong className="text-foreground">AI x Pravo</strong> kot
+              rešitev za izziv <em>»Aplikacija za avtomatizirano pripravo pravnega dokumenta po vaši izbiri«</em>,
+              ki ga je zastavilo podjetje <strong className="text-foreground">Integra Legal / DocuWise</strong>.
+            </p>
+          </div>
+
+          <div className="border border-border rounded-lg p-6 bg-card">
+            <div className="flex items-center gap-3 mb-4">
+              <Users className="w-5 h-5 text-primary" />
+              <h3 className="font-serif text-xl text-foreground">Ekipa Ingver</h3>
+            </div>
+
+            {/* Team photo placeholder */}
+            <div className="w-full aspect-video bg-muted rounded-lg border border-border flex items-center justify-center mb-4">
+              <span className="text-muted-foreground text-sm">Slika ekipe (kmalu)</span>
+            </div>
+
+            <p className="text-sm">
+              Smo ekipa navdušencev, ki verjamemo v moč tehnologije za dostopnejše pravne storitve.
+            </p>
+          </div>
 
           <h2 className="font-serif text-2xl text-foreground pt-4">Kontakt</h2>
           <p>
