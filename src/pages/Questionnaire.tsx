@@ -7,10 +7,10 @@ import ingverLogo from "@/assets/ingver_square.png";
 import { PreQuestionnaire } from "@/components/gdpr/PreQuestionnaire";
 
 const DOCUWISE_URLS: Record<string, string> = {
-  access: "https://app.docuwise.eu/sl/share/f4396b5a-c3d2-42b5-a491-98381bf7643c",
+  access: "https://app.docuwise.eu/sl/share/a6eeeeb0-06f4-4c52-ad88-3fe6ee5a952b",
   erasure: "https://app.docuwise.eu/sl/share/963ff6c5-6eb8-4284-8742-8ff74feb14bb",
-  rectification: "https://app.docuwise.eu/sl/share/f4396b5a-c3d2-42b5-a491-98381bf7643c",
-  portability: "https://app.docuwise.eu/sl/share/f4396b5a-c3d2-42b5-a491-98381bf7643c",
+  rectification: "https://app.docuwise.eu/sl/share/fc323106-cfb2-46e4-9bb2-6a182776e589",
+  portability: "",
 };
 
 const Questionnaire = () => {
