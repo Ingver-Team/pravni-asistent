@@ -179,8 +179,8 @@ const Index = () => {
       <footer className="border-t border-border py-8">
         <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
-            <Shield className="w-4 h-4" />
-            <span>GDPR Pomočnik</span>
+            <img src={ingverLogo} alt="Prijava IP" className="w-5 h-5" />
+            <span>Prijava IP</span>
           </div>
           <div className="flex items-center gap-6">
             <Link to="/o-nas" className="hover:text-foreground transition-colors">O nas</Link>
