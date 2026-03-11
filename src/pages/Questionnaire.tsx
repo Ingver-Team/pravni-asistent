@@ -24,9 +24,9 @@ const Questionnaire = () => {
             </Button>
             <div className="h-6 w-px bg-border" />
             <Link to="/" className="flex items-center gap-2">
-              <Shield className="w-5 h-5 text-primary" />
+              <img src="/src/assets/logo.png" alt="Prijava IP" className="w-5 h-5" />
               <div>
-                <h1 className="font-serif text-lg leading-none">GDPR Pomočnik</h1>
+                <h1 className="font-serif text-lg leading-none">Prijava IP</h1>
                 <p className="text-xs text-muted-foreground">Obrazec za Informacijskega pooblaščenca</p>
               </div>
             </Link>

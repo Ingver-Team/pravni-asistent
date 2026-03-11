@@ -61,8 +61,8 @@ const Privacy = () => {
       <footer className="border-t border-border py-8">
         <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
-            <Shield className="w-4 h-4" />
-            <span>GDPR Pomočnik</span>
+            <img src="/src/assets/logo.png" alt="Prijava IP" className="w-4 h-4" />
+            <span>Prijava IP</span>
           </div>
           <p>© {new Date().getFullYear()} Vse pravice pridržane.</p>
         </div>
