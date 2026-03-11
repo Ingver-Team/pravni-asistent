@@ -137,14 +137,21 @@ const Index = () => {
                 Preveri svoje pravice <ArrowRight className="w-4 h-4" />
               </Button>
             </div>
-            <div className="space-y-3">
-              {rights.map((r) => (
-                <div key={r} className="flex items-center gap-3 bg-card border border-border rounded-lg px-4 py-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0" />
-                  <span className="text-sm font-medium text-foreground">{r}</span>
-                </div>
+            <Accordion type="single" collapsible className="space-y-2">
+              {rights.map((r, i) => (
+                <AccordionItem key={i} value={`item-${i}`} className="bg-card border border-border rounded-lg px-4 py-0.5">
+                  <AccordionTrigger className="text-sm font-medium text-foreground hover:no-underline gap-3">
+                    <span className="flex items-center gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-accent shrink-0" />
+                      {r.title}
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-sm text-muted-foreground pl-8">
+                    {r.description}
+                  </AccordionContent>
+                </AccordionItem>
               ))}
-            </div>
+            </Accordion>
           </div>
         </div>
       </section>
