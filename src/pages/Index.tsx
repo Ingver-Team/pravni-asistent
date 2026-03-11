@@ -32,12 +32,30 @@ const features = [
 ];
 
 const rights = [
-  "Pravica do dostopa do podatkov",
-  "Pravica do izbrisa (pravica do pozabe)",
-  "Pravica do popravka podatkov",
-  "Pravica do prenosljivosti podatkov",
-  "Pravica do ugovora obdelavi",
-  "Pravica do omejitve obdelave",
+  {
+    title: "Pravica do dostopa do podatkov",
+    description: "Imate pravico vedeti, ali se vaši osebni podatki obdelujejo, in dostopati do teh podatkov. Upravljavec vam mora zagotoviti kopijo vaših osebnih podatkov.",
+  },
+  {
+    title: "Pravica do izbrisa (pravica do pozabe)",
+    description: "Zahtevate lahko izbris vaših osebnih podatkov, kadar ti niso več potrebni za namen, za katerega so bili zbrani, ali če prekličete privolitev.",
+  },
+  {
+    title: "Pravica do popravka podatkov",
+    description: "Če so vaši osebni podatki netočni ali nepopolni, imate pravico zahtevati njihov popravek ali dopolnitev brez nepotrebnega odlašanja.",
+  },
+  {
+    title: "Pravica do prenosljivosti podatkov",
+    description: "Svoje osebne podatke lahko prejmete v strukturirani obliki in jih prenesete k drugemu upravljavcu, kadar obdelava temelji na privolitvi ali pogodbi.",
+  },
+  {
+    title: "Pravica do ugovora obdelavi",
+    description: "Kadar koli lahko ugovarjate obdelavi svojih osebnih podatkov, zlasti za namene neposrednega trženja ali obdelave na podlagi zakonitega interesa.",
+  },
+  {
+    title: "Pravica do omejitve obdelave",
+    description: "Zahtevate lahko omejitev obdelave vaših podatkov, na primer ko izpodbijate njihovo točnost ali ko je obdelava nezakonita, vi pa nasprotujete izbrisu.",
+  },
 ];
 
 const Index = () => {
