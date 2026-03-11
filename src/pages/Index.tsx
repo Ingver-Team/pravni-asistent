@@ -140,7 +140,7 @@ const Index = () => {
             <Accordion type="single" collapsible className="space-y-2">
               {rights.map((r, i) => (
                 <AccordionItem key={i} value={`item-${i}`} className="bg-card border border-border rounded-lg px-4 py-0.5">
-                  <AccordionTrigger className="text-sm font-medium text-foreground hover:no-underline gap-3">
+                  <AccordionTrigger className="text-sm font-medium text-foreground hover:no-underline gap-3 font-sans">
                     <span className="flex items-center gap-3">
                       <CheckCircle2 className="w-5 h-5 text-accent shrink-0" />
                       {r.title}
