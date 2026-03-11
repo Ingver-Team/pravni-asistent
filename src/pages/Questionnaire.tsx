@@ -1,18 +1,25 @@
 import { useState } from "react";
-import { MessageSquare, Shield, ArrowLeft } from "lucide-react";
+import { MessageSquare, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ChatPanel } from "@/components/gdpr/ChatPanel";
 import { Link } from "react-router-dom";
 import ingverLogo from "@/assets/ingver_square.png";
+import { PreQuestionnaire } from "@/components/gdpr/PreQuestionnaire";
 
 const DOCUWISE_URL = "https://app.docuwise.eu/sl/share/f4396b5a-c3d2-42b5-a491-98381bf7643c";
 
 const Questionnaire = () => {
   const [chatOpen, setChatOpen] = useState(false);
+  const [preCompleted, setPreCompleted] = useState(false);
+  const [preAnswers, setPreAnswers] = useState<Record<string, string>>({});
+
+  const handlePreComplete = (answers: Record<string, string>) => {
+    setPreAnswers(answers);
+    setPreCompleted(true);
+  };
 
   return (
     <div className="flex h-screen overflow-hidden">
-      {/* Main Content */}
       <div className="flex-1 flex flex-col min-w-0">
         {/* Top Bar */}
         <header className="h-14 border-b border-border bg-card flex items-center justify-between px-6 shrink-0">
@@ -44,26 +51,19 @@ const Questionnaire = () => {
         </header>
 
         <div className="flex-1 flex overflow-hidden">
-          {/* DocuWise iframe */}
-          <div className="flex-1 min-w-0">
-            {DOCUWISE_URL ? (
+          {!preCompleted ? (
+            <PreQuestionnaire onComplete={handlePreComplete} />
+          ) : (
+            <div className="flex-1 min-w-0">
               <iframe
                 src={DOCUWISE_URL}
                 className="w-full h-full border-0"
                 title="DocuWise vprašalnik"
                 allow="clipboard-write"
               />
-            ) : (
-              <div className="w-full h-full flex items-center justify-center bg-muted/30">
-                <div className="text-center text-muted-foreground">
-                  <p className="text-lg font-medium mb-2">DocuWise vprašalnik</p>
-                  <p className="text-sm">URL za iframe še ni nastavljen.</p>
-                </div>
-              </div>
-            )}
-          </div>
+            </div>
+          )}
 
-          {/* Right Chat Panel */}
           {chatOpen && <ChatPanel onClose={() => setChatOpen(false)} />}
         </div>
       </div>
