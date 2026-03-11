@@ -68,7 +68,7 @@ const Questionnaire = () => {
           ) : (
             <div className="flex-1 min-w-0">
               <iframe
-                src={DOCUWISE_URL}
+                src={DOCUWISE_URLS[preAnswers.right_type] || DOCUWISE_URLS.access}
                 className="w-full h-full border-0"
                 title="DocuWise vprašalnik"
                 allow="clipboard-write"
