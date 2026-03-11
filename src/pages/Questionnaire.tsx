@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ChatPanel } from "@/components/gdpr/ChatPanel";
 import { Link } from "react-router-dom";
 
-const DOCUWISE_URL = ""; // TODO: Add DocuWise questionnaire URL
+const DOCUWISE_URL = "https://app.docuwise.eu/sl/documents/f4396b5a-c3d2-42b5-a491-98381bf7643c/create";
 
 const Questionnaire = () => {
   const [chatOpen, setChatOpen] = useState(true);
