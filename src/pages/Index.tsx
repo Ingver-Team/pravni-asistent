@@ -13,49 +13,49 @@ const features = [
   {
     icon: FileCheck,
     title: "Vodeni vprašalnik",
-    description: "Korak za korakom skozi postopek uveljavljanja vaših pravic po GDPR uredbi.",
+    description: "Odgovorite na nekaj vprašanj, na podlagi katerih se samodejno pripravi obrazec za prijavo kršitve pri IP.",
   },
   {
     icon: UserCheck,
-    title: "Preverjanje identitete",
-    description: "Jasna navodila za postopek identifikacije in uveljavljanja zahtevkov.",
+    title: "Prilagojeno glede na pravico",
+    description: "Obrazec se prilagodi glede na to, ali uveljavljate vpogled, izbris, popravek ali prenos podatkov.",
   },
   {
     icon: Scale,
-    title: "Pravna podlaga",
-    description: "Vsa vprašanja temeljijo na aktualni zakonodaji in GDPR uredbi EU.",
+    title: "Skladno z GDPR in ZVOP-2",
+    description: "Vprašanja temeljijo na Splošni uredbi o varstvu podatkov (GDPR) in slovenskem ZVOP-2.",
   },
   {
     icon: MessageSquare,
     title: "AI Pomočnik",
-    description: "Integriran virtualni asistent za pomoč pri razumevanju vaših pravic.",
+    description: "Če se kje zatakne, vam je na voljo virtualni asistent, ki pojasni pravne pojme in postopke.",
   },
 ];
 
 const rights = [
   {
     title: "Pravica do dostopa do podatkov",
-    description: "Imate pravico vedeti, ali se vaši osebni podatki obdelujejo, in dostopati do teh podatkov. Upravljavec vam mora zagotoviti kopijo vaših osebnih podatkov.",
+    description: "Upravljavec vam mora v enem mesecu zagotoviti informacijo o tem, ali obdeluje vaše osebne podatke, in vam posredovati njihovo kopijo. Zahtevo lahko oddate pisno ali elektronsko.",
   },
   {
     title: "Pravica do izbrisa (pravica do pozabe)",
-    description: "Zahtevate lahko izbris vaših osebnih podatkov, kadar ti niso več potrebni za namen, za katerega so bili zbrani, ali če prekličete privolitev.",
+    description: "Upravljavec mora brez nepotrebnega odlašanja izbrisati vaše podatke, kadar ti niso več potrebni, prekličete privolitev ali je obdelava nezakonita. Če zahtevo zavrne, se lahko pritožite pri IP.",
   },
   {
     title: "Pravica do popravka podatkov",
-    description: "Če so vaši osebni podatki netočni ali nepopolni, imate pravico zahtevati njihov popravek ali dopolnitev brez nepotrebnega odlašanja.",
+    description: "Če upravljavec vodi netočne ali nepopolne podatke o vas, mu lahko naložite, da jih popravi ali dopolni. Upravljavec mora odgovoriti v enem mesecu.",
   },
   {
     title: "Pravica do prenosljivosti podatkov",
-    description: "Svoje osebne podatke lahko prejmete v strukturirani obliki in jih prenesete k drugemu upravljavcu, kadar obdelava temelji na privolitvi ali pogodbi.",
+    description: "Kadar obdelava temelji na privolitvi ali pogodbi, lahko zahtevate, da vam upravljavec posreduje vaše podatke v strukturirani, strojno berljivi obliki ali jih prenese neposredno drugemu upravljavcu.",
   },
   {
     title: "Pravica do ugovora obdelavi",
-    description: "Kadar koli lahko ugovarjate obdelavi svojih osebnih podatkov, zlasti za namene neposrednega trženja ali obdelave na podlagi zakonitega interesa.",
+    description: "Obdelavi lahko ugovarjate kadar koli, zlasti pri neposrednem trženju. Upravljavec mora prenehati z obdelavo, razen če dokaže nujne zakonite razloge.",
   },
   {
     title: "Pravica do omejitve obdelave",
-    description: "Zahtevate lahko omejitev obdelave vaših podatkov, na primer ko izpodbijate njihovo točnost ali ko je obdelava nezakonita, vi pa nasprotujete izbrisu.",
+    description: "Zahtevate lahko, da upravljavec začasno preneha z obdelavo vaših podatkov – na primer, dokler se ne razreši spor o točnosti podatkov ali zakonitosti obdelave.",
   },
 ];
 
@@ -83,20 +83,20 @@ const Index = () => {
         <div className="max-w-4xl mx-auto px-6 py-24 md:py-32 text-center relative">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary text-sm font-medium px-4 py-1.5 rounded-full mb-6">
             <BookOpen className="w-4 h-4" />
-            Obrazec za Informacijskega pooblaščenca
+            Prijava pri Informacijskem pooblaščencu RS
           </div>
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6 leading-tight">
-            Pripravite obrazec za <span className="text-primary">Informacijskega pooblaščenca</span>
+            Uveljavljajte svoje pravice pri <span className="text-primary">Informacijskem pooblaščencu</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            Vprašalnik vas vodi skozi pripravo obrazca za uveljavljanje pravic po GDPR, ki se pošlje Informacijskemu pooblaščencu Republike Slovenije. Enostavno, hitro in brezplačno.
+            Če upravljavec vaših osebnih podatkov ni odgovoril na vašo zahtevo ali jo je zavrnil, lahko vložite prijavo pri Informacijskem pooblaščencu RS. Naš vprašalnik vam pomaga pripraviti ustrezen obrazec — hitro, enostavno in brezplačno.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button onClick={() => navigate("/vprasalnik")} size="lg" className="gap-2 text-base px-8">
-              Začni z vprašalnikom <ArrowRight className="w-5 h-5" />
+              Pripravi obrazec <ArrowRight className="w-5 h-5" />
             </Button>
             <Button variant="outline" size="lg" className="gap-2 text-base px-8" onClick={() => document.getElementById("features")?.scrollIntoView({ behavior: "smooth" })}>
-              Izvedi več
+              Kako deluje?
             </Button>
           </div>
         </div>
@@ -106,9 +106,9 @@ const Index = () => {
       <section id="features" className="py-20 md:py-28 bg-card border-y border-border">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">Kako vam pomagamo?</h2>
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">Kako deluje?</h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Naš sistem vas vodi skozi celoten postopek uveljavljanja vaših pravic po GDPR.
+              V treh korakih do obrazca, ki ga pošljete Informacijskemu pooblaščencu RS.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -132,10 +132,10 @@ const Index = () => {
             <div>
               <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">Vaše pravice po GDPR</h2>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Z vprašalnikom pripravite obrazec, ki ga nato pošljete Informacijskemu pooblaščencu RS. Pokrivamo vse ključne pravice po GDPR uredbi.
+                Splošna uredba o varstvu podatkov (GDPR) vam zagotavlja vrsto pravic glede vaših osebnih podatkov. Če upravljavec teh pravic ne spoštuje, lahko pri Informacijskem pooblaščencu vložite prijavo. Izberite pravico, ki jo želite uveljavljati, in pripravili vam bomo ustrezen obrazec.
               </p>
               <Button onClick={() => navigate("/vprasalnik")} className="gap-2">
-                Preveri svoje pravice <ArrowRight className="w-4 h-4" />
+                Pripravi obrazec <ArrowRight className="w-4 h-4" />
               </Button>
             </div>
             <Accordion type="single" collapsible className="space-y-2">
@@ -160,9 +160,9 @@ const Index = () => {
       {/* CTA */}
       <section className="py-20 md:py-28 bg-primary text-primary-foreground">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl mb-4">Pripravljeni na začetek?</h2>
+          <h2 className="font-serif text-3xl md:text-4xl mb-4">Pripravite prijavo v 5 minutah</h2>
           <p className="text-primary-foreground/80 mb-8 text-lg">
-            Vprašalnik traja približno 5 minut. Na podlagi vaših odgovorov pripravimo obrazec, ki ga pošljete Informacijskemu pooblaščencu RS za uveljavljanje vaših pravic.
+            Odgovorite na vprašanja v vodenem obrazcu, na podlagi vaših odgovorov pa pripravimo dokument, ki ga lahko posredujete Informacijskemu pooblaščencu RS. Brez pravniškega znanja, brez zapletov.
           </p>
           <Button
             onClick={() => navigate("/vprasalnik")}
@@ -170,7 +170,7 @@ const Index = () => {
             variant="secondary"
             className="gap-2 text-base px-8"
           >
-            Začni vprašalnik <ArrowRight className="w-5 h-5" />
+            Pripravi obrazec <ArrowRight className="w-5 h-5" />
           </Button>
         </div>
       </section>
