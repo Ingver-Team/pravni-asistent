@@ -7,7 +7,7 @@ import ingverLogo from "@/assets/ingver_square.png";
 import { PreQuestionnaire } from "@/components/gdpr/PreQuestionnaire";
 
 const DOCUWISE_URLS: Record<string, string> = {
-  access: "https://app.docuwise.eu/sl/share/a6eeeeb0-06f4-4c52-ad88-3fe6ee5a952b",
+  access: "https://app.docuwise.eu/sl/share/b2485bc0-35cc-4eca-b146-d1493d215701",
   erasure: "https://app.docuwise.eu/en/share/83433540-05d3-4dd9-a1fd-9e4bf54aadaa",
   rectification: "https://app.docuwise.eu/en/share/9b0bde4a-727e-43e6-bd87-4049579f54dc",
   portability: "",
