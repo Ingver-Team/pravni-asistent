@@ -160,9 +160,9 @@ const Index = () => {
       {/* CTA */}
       <section className="py-20 md:py-28 bg-primary text-primary-foreground">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl mb-4">Pripravljeni na začetek?</h2>
+          <h2 className="font-serif text-3xl md:text-4xl mb-4">Pripravite prijavo v 5 minutah</h2>
           <p className="text-primary-foreground/80 mb-8 text-lg">
-            Vprašalnik traja približno 5 minut. Na podlagi vaših odgovorov pripravimo obrazec, ki ga pošljete Informacijskemu pooblaščencu RS za uveljavljanje vaših pravic.
+            Odgovorite na vprašanja v vodenem obrazcu, na podlagi vaših odgovorov pa pripravimo dokument, ki ga lahko posredujete Informacijskemu pooblaščencu RS. Brez pravniškega znanja, brez zapletov.
           </p>
           <Button
             onClick={() => navigate("/vprasalnik")}
@@ -170,7 +170,7 @@ const Index = () => {
             variant="secondary"
             className="gap-2 text-base px-8"
           >
-            Začni vprašalnik <ArrowRight className="w-5 h-5" />
+            Pripravi obrazec <ArrowRight className="w-5 h-5" />
           </Button>
         </div>
       </section>
