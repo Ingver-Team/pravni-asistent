@@ -1,8 +1,10 @@
-import { Shield, ArrowLeft, Users } from "lucide-react";
+import { Shield, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-
-const About = () => {
+import amalija from "@/assets/team-amalija.jpg";
+import sven from "@/assets/team-sven.jpg";
+import lara from "@/assets/team-lara.jpg";
+import pika from "@/assets/team-pika.jpg";
   return (
     <div className="min-h-screen bg-background">
       <header className="border-b border-border bg-card/80 backdrop-blur-sm sticky top-0 z-50">
