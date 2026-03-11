@@ -8,8 +8,8 @@ const Privacy = () => {
       <header className="border-b border-border bg-card/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-6xl mx-auto flex items-center justify-between px-6 h-16">
           <Link to="/" className="flex items-center gap-2">
-            <Shield className="w-6 h-6 text-primary" />
-            <span className="font-serif text-xl">GDPR Pomočnik</span>
+            <img src="/src/assets/logo.png" alt="Prijava IP" className="w-6 h-6" />
+            <span className="font-serif text-xl">Prijava IP</span>
           </Link>
           <Button asChild size="sm" variant="outline" className="gap-2">
             <Link to="/"><ArrowLeft className="w-4 h-4" /> Nazaj</Link>
@@ -61,8 +61,8 @@ const Privacy = () => {
       <footer className="border-t border-border py-8">
         <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
-            <Shield className="w-4 h-4" />
-            <span>GDPR Pomočnik</span>
+            <img src="/src/assets/logo.png" alt="Prijava IP" className="w-4 h-4" />
+            <span>Prijava IP</span>
           </div>
           <p>© {new Date().getFullYear()} Vse pravice pridržane.</p>
         </div>
