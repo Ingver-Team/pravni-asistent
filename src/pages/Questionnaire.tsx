@@ -15,13 +15,22 @@ const Questionnaire = () => {
       <div className="flex-1 flex flex-col min-w-0">
         {/* Top Bar */}
         <header className="h-14 border-b border-border bg-card flex items-center justify-between px-6 shrink-0">
-          <Link to="/" className="flex items-center gap-2">
-            <Shield className="w-5 h-5 text-primary" />
-            <div>
-              <h1 className="font-serif text-lg leading-none">GDPR Pomočnik</h1>
-              <p className="text-xs text-muted-foreground">Obrazec za Informacijskega pooblaščenca</p>
-            </div>
-          </Link>
+          <div className="flex items-center gap-3">
+            <Button variant="ghost" size="sm" asChild className="gap-2 -ml-2">
+              <Link to="/">
+                <ArrowLeft className="w-4 h-4" />
+                Nazaj
+              </Link>
+            </Button>
+            <div className="h-6 w-px bg-border" />
+            <Link to="/" className="flex items-center gap-2">
+              <Shield className="w-5 h-5 text-primary" />
+              <div>
+                <h1 className="font-serif text-lg leading-none">GDPR Pomočnik</h1>
+                <p className="text-xs text-muted-foreground">Obrazec za Informacijskega pooblaščenca</p>
+              </div>
+            </Link>
+          </div>
           <Button
             variant="outline"
             size="sm"
