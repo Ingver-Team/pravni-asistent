@@ -1,68 +1,32 @@
-import { useState, useCallback } from "react";
-import { MessageSquare } from "lucide-react";
+import { useState } from "react";
+import { MessageSquare, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { StepNavigation } from "@/components/gdpr/StepNavigation";
-import { QuestionCard } from "@/components/gdpr/QuestionCard";
 import { ChatPanel } from "@/components/gdpr/ChatPanel";
-import { CompletionScreen } from "@/components/gdpr/CompletionScreen";
-import { gdprQuestions } from "@/data/gdprQuestions";
+import { Link } from "react-router-dom";
 
-const Index = () => {
-  const [currentStep, setCurrentStep] = useState(1);
-  const [answers, setAnswers] = useState<Record<number, string>>({});
+const DOCUWISE_URL = ""; // TODO: Add DocuWise questionnaire URL
+
+const Questionnaire = () => {
   const [chatOpen, setChatOpen] = useState(true);
-  const [completed, setCompleted] = useState(false);
-
-  const completedSteps = new Set(Object.keys(answers).map(Number));
-  const totalSteps = gdprQuestions.length;
-
-  const handleAnswer = useCallback((questionId: number, optionId: string) => {
-    setAnswers((prev) => ({ ...prev, [questionId]: optionId }));
-  }, []);
-
-  const handleNext = useCallback(() => {
-    if (currentStep === totalSteps) {
-      setCompleted(true);
-    } else {
-      setCurrentStep((s) => Math.min(s + 1, totalSteps));
-    }
-  }, [currentStep, totalSteps]);
-
-  const handleBack = useCallback(() => {
-    setCurrentStep((s) => Math.max(s - 1, 1));
-  }, []);
-
-  const handleRestart = useCallback(() => {
-    setCurrentStep(1);
-    setAnswers({});
-    setCompleted(false);
-  }, []);
 
   return (
     <div className="flex h-screen overflow-hidden">
-      {/* Left Sidebar */}
-      <StepNavigation
-        currentStep={currentStep}
-        completedSteps={completedSteps}
-        onStepClick={(step) => {
-          setCompleted(false);
-          setCurrentStep(step);
-        }}
-      />
-
       {/* Main Content */}
       <div className="flex-1 flex flex-col min-w-0">
         {/* Top Bar */}
         <header className="h-14 border-b border-border bg-card flex items-center justify-between px-6 shrink-0">
-          <div>
-            <h1 className="font-serif text-lg leading-none">GDPR Pomočnik</h1>
-            <p className="text-xs text-muted-foreground">Vprašalnik za uveljavljanje pravic</p>
-          </div>
+          <Link to="/" className="flex items-center gap-2">
+            <Shield className="w-5 h-5 text-primary" />
+            <div>
+              <h1 className="font-serif text-lg leading-none">GDPR Pomočnik</h1>
+              <p className="text-xs text-muted-foreground">Obrazec za Informacijskega pooblaščenca</p>
+            </div>
+          </Link>
           <Button
             variant="outline"
             size="sm"
             onClick={() => setChatOpen(!chatOpen)}
-            className="gap-2 xl:hidden"
+            className="gap-2"
           >
             <MessageSquare className="w-4 h-4" />
             AI Pomočnik
@@ -70,17 +34,24 @@ const Index = () => {
         </header>
 
         <div className="flex-1 flex overflow-hidden">
-          {completed ? (
-            <CompletionScreen onRestart={handleRestart} />
-          ) : (
-            <QuestionCard
-              currentStep={currentStep}
-              answers={answers}
-              onAnswer={handleAnswer}
-              onNext={handleNext}
-              onBack={handleBack}
-            />
-          )}
+          {/* DocuWise iframe */}
+          <div className="flex-1 min-w-0">
+            {DOCUWISE_URL ? (
+              <iframe
+                src={DOCUWISE_URL}
+                className="w-full h-full border-0"
+                title="DocuWise vprašalnik"
+                allow="clipboard-write"
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center bg-muted/30">
+                <div className="text-center text-muted-foreground">
+                  <p className="text-lg font-medium mb-2">DocuWise vprašalnik</p>
+                  <p className="text-sm">URL za iframe še ni nastavljen.</p>
+                </div>
+              </div>
+            )}
+          </div>
 
           {/* Right Chat Panel */}
           {chatOpen && <ChatPanel onClose={() => setChatOpen(false)} />}
@@ -90,4 +61,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Questionnaire;
