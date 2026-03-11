@@ -3,6 +3,7 @@ import { MessageSquare, Shield, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ChatPanel } from "@/components/gdpr/ChatPanel";
 import { Link } from "react-router-dom";
+import ingverLogo from "@/assets/ingver_square.png";
 
 const DOCUWISE_URL = "https://app.docuwise.eu/sl/share/f4396b5a-c3d2-42b5-a491-98381bf7643c";
 
